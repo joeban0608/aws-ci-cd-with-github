@@ -32,4 +32,4 @@ jobs:
           aws-region: ap-northeast-1
   
       - name: Deploy to S3 bucket
-        run: aws s3 sync ./dist s3://aws-ci-cd-test-bucket --delete # Modify BUCKET_NAME with your bucket name
+        run: aws s3 sync ./dist s3://aws-ci-cd-test-bucket --delete --cache-control max-age=0 # Modify BUCKET_NAME with your bucket name
